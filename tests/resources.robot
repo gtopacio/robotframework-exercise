@@ -10,6 +10,7 @@ ${DELAY}        0
 ${PASSWORD}     secret_sauce
 ${VALID USER}   standard_user
 ${LOCKED USER}  locked_out_user
+${PROB USER}    problem_user
 ${GLITCH USER}  performance_glitch_user
 
 *** Keywords ***
@@ -33,4 +34,5 @@ Input Username
     Input Text  user-name   ${username}
 
 Input User Password
-    Input Password  password    ${PASSWORD}
+    [Arguments]     ${password}
+    Input Password  password    ${password}
